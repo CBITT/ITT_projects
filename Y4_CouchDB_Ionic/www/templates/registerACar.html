@@ -1,0 +1,88 @@
+<ion-view title="Car Sales App" id="page1">
+  <ion-content padding="true" class="has-header">
+    <form id="registerACar-form2" class="list">
+      <label class="item item-input" id="registerACar-input3">
+        <input type="text" data-ng-model="make" placeholder="Make">
+      </label>
+      <label class="item item-input" id="registerACar-input4">
+        <input type="text" data-ng-model="model" placeholder="Model">
+      </label>
+      <label class="item item-input" id="registerACar-input5">
+        <input type="number" data-ng-model="year" placeholder="Year">
+      </label>
+      <label class="item item-input" id="registerACar-input6">
+        <input type="number" data-ng-model="price" placeholder="Price (€)">
+      </label>
+      <label class="item item-input" id="registerACar-input7">
+        <input type="text" data-ng-model="description" placeholder="Description">
+      </label>
+    <a ui-sref="cars()" id="registerACar-button1" class="button button-positive button-block" data-ng-click="addCar(this)" >Add Car</a>
+       
+        <!------input label----->
+   <label class="item item-input">
+    <span class="input-label">ID: </span>
+    <input id="idnn" data-ng-model="idnn" type="text" placeholder="enter here">
+</label>
+<!------update button----->
+
+<button data-ng-click="updateCar(this)" class="button button-energized button-block">Update Car</button>
+        
+        <ion-item data-ng-repeat= "details in carToUpdate" class="item item-input" id="registerACar-input7">
+           <input type="text"  value="{{details.make}}">
+         
+      </ion-item>
+
+<!------delete button------>
+<button class="button button-assertive button-block" data-ng-click="deleteCar(this)">Delete Car</button>
+   </form>
+      
+      <!------get by make view-->
+
+      <button class="button button-calm button-block" data-ng-click="getByModel()">Get by Model</button>
+      
+      <div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Find by Make
+    </div>
+    <select name="carToFind" id="carToFind" ng-model="data.carToFind" ng-change="countCar(data.carToFind)">
+      <option>Select</option>
+        <option value="nissan">Nissan</option>
+      <option value="BMW">BMW</option>
+      <option value="mazda">Mazda</option>
+        <option value="renault">Renault</option>
+        <option value="tesla">Tesla</option>
+        <option value="ford">Ford</option>
+        <option value="rover">Rover</option>
+    </select>
+  </label>
+
+</div>
+      <h5 data-ng-model= "carsSelected" >{{carsSelected}}</h5>
+     
+       <a class="item item-thumbnail-left" data-ng-repeat="car in listOfCarsByMake" href="#">
+        <img src="../img/car_default.png">
+        <h2>{{car}}</h2>
+        //car.rows.value dont work. it prints the right result in the console though
+           
+    </a>
+
+      
+
+    <button data-ng-click="showCarsLocal()" class="button button-secondary button-block">Show local data</button>
+    <button data-ng-click="showCarsRemote()" class="button button-secondary button-block">Load remote data</button>
+ <!--result cards------------>
+
+<div class="list">
+
+    <a class="item item-thumbnail-left" data-ng-repeat="car in listOfCars" href="#">
+        <img src="../img/car_default.png">
+        <h2>{{ car.make }}</h2>
+        <p>{{ car.model }}</p>
+    </a>
+
+</div>
+   
+  </ion-content>
+</ion-view>
