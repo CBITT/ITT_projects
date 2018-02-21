@@ -29,3 +29,4 @@ Csaba Bango - Initial work
 
 ### Screenshots:
 
+![Screenshot](https://github.com/CBITT/ITT_projects/blob/master/Y4_CouchDB_Ionic/ui_sample.PNG?raw=true "Sample UI")
