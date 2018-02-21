@@ -1,26 +1,31 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
+## Car directory system with CouchDB
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Implementation of CouchDB database with the usage of REST interface to show examples of CRUD and calls to a mapreduce operations. The app is built on the hybrid application framework Ionic. Ionic is powered with Cordova and provides functionality to Angular. For the connection to CouchDB, I created a local
+database PouchDB that serves as a driver for CouchDB. PouchDB is the JavaScript database that syncs.  
+
+### Getting Started
 
 To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
 
-### With the Ionic CLI:
+### Installing:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
+Take the name after `ionic-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ npm install -g ionic cordova
+$ npm install -g couch-db
+
+```
+Then 
+Then, to run it, cd into the project's directory and run. Note: CouchDB must be running in Services
+
+```bash
+$ ionic serve
 ```
 
-Substitute ios for android if not on a Mac.
+### Authors:
+Csaba Bango - Initial work
+
+### Screenshots:
 
