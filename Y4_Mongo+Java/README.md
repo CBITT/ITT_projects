@@ -5,5 +5,5 @@ The application is built in Java and is using Mongo's official driver (MongoDB-d
 
 # Screenshots:
 
-![Screenshot](https://github.com/CBITT/database_projects/Y4_Mongo+Java/ui_sample.PNG?raw=true "Sample UI")
+![Screenshot](https://github.com/CBITT/database_projects/blob/master/Y4_Mongo%2BJava/ui_sample.png?raw=true "Sample UI")
 
