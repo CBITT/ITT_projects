@@ -6,7 +6,7 @@ The repo also includes explanation along the code for the particular projects.
 ##Used Tools
 
 ### project 1
-* Javascript
+* JavaScript
 * Ionic framework
 * Angular
 * CouchDB
